@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  chatgpt-web: 
+    profiles: ["no-proxy"]
+    container_name: chatgpt-web
+    image:  yuejunzhang /ChatGPT--Web 
+    ports:
+      - 3000:3000
+    environment:
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+      - CODE=$CODE
+      - BASE_URL=$BASE_URL
+      - OPENAI_ORG_ID=$OPENAI_ORG_ID
+      - HIDE_USER_API_KEY=$HIDE_USER_API_KEY
+      - DISABLE_GPT4=DISABLE_GPT4
+
+  chatgpt-web-proxy: 
+    profiles: ["proxy"]
+    container_name: chatgpt-web-proxy
+    image:  yuejunzhang /ChatGPT--Web 
+    ports:
+      - 3000:3000
+    environment:
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+      - CODE=$CODE
+      - PROXY_URL=$PROXY_URL
+      - BASE_URL=$BASE_URL
+      - OPENAI_ORG_ID=$OPENAI_ORG_ID
+      - HIDE_USER_API_KEY=$HIDE_USER_API_KEY
+      - DISABLE_GPT4=DISABLE_GPT4
