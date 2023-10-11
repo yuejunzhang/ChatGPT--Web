@@ -5,7 +5,7 @@
      "routes": [
     {
       "src": "/next/(.*)",
-      "dest": "https://chat-gpt-next-web-three-orcin-53.vercel.app"
+      "dest": "https://www.163.com"
     }
   ]
 
