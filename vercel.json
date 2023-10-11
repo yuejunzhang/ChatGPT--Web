@@ -6,10 +6,6 @@
     {
       "src": "/next/(.*)",
       "dest": "https://chat-gpt-next-web-three-orcin-53.vercel.app/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "https://chatgpt-web-six-mu.vercel.app/$1"
     }
   ]
 
